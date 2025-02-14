@@ -8,7 +8,7 @@ const serverless = require('serverless-http');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "*" }));
+app.options('*', cors());
 app.use(express.json());
 
 // MongoDB URI
